@@ -1,0 +1,40 @@
+{
+  "rounds": [
+    {
+      "cutoff": "2026-11-20T15:55:00-05:00",
+      "outcome": {
+        "summary": "用户参考答案，尚无真实投资者成交单。周五收盘125.53，周一开盘167.04，收盘165.05。假设标准100份、0.62买入18卖出，未计费用利润1738美元；15.87卖出利润1525美元。卖出金额27倍需16.74，利润27倍需17.36。公司复聘公告可查 https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx 。"
+      },
+      "reference": {
+        "notes": "独立验证材料。来源摘要、用户设定和真实成交须区分；缺少归档不能判定已验证。"
+      }
+    },
+    {
+      "cutoff": "2026-11-22T23:30:00-05:00",
+      "outcome": {
+        "summary": "用户参考答案，尚无真实投资者成交单。周五收盘125.53，周一开盘167.04，收盘165.05。假设标准100份、0.62买入18卖出，未计费用利润1738美元；15.87卖出利润1525美元。卖出金额27倍需16.74，利润27倍需17.36。公司复聘公告可查 https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx 。"
+      },
+      "reference": {
+        "notes": "独立验证材料。来源摘要、用户设定和真实成交须区分；缺少归档不能判定已验证。"
+      }
+    },
+    {
+      "cutoff": "2026-11-23T09:30:00-05:00",
+      "outcome": {
+        "summary": "用户参考答案，尚无真实投资者成交单。周五收盘125.53，周一开盘167.04，收盘165.05。假设标准100份、0.62买入18卖出，未计费用利润1738美元；15.87卖出利润1525美元。卖出金额27倍需16.74，利润27倍需17.36。公司复聘公告可查 https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx 。"
+      },
+      "reference": {
+        "notes": "独立验证材料。来源摘要、用户设定和真实成交须区分；缺少归档不能判定已验证。"
+      }
+    },
+    {
+      "cutoff": "2026-11-23T16:10:00-05:00",
+      "outcome": {
+        "summary": "用户参考答案，尚无真实投资者成交单。周五收盘125.53，周一开盘167.04，收盘165.05。假设标准100份、0.62买入18卖出，未计费用利润1738美元；15.87卖出利润1525美元。卖出金额27倍需16.74，利润27倍需17.36。公司复聘公告可查 https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx 。"
+      },
+      "reference": {
+        "notes": "独立验证材料。来源摘要、用户设定和真实成交须区分；缺少归档不能判定已验证。"
+      }
+    }
+  ]
+}

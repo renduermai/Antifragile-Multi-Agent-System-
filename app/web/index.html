@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>反脆弱 · 投资研究</title>
+<link rel="stylesheet" href="/static/style.css">
+<header><div><b>反脆弱</b><span>投资研究与模拟决策 · V3.2</span></div><small>本地研究工作台</small></header>
+<nav><button data-page="hunt" class="selected">机会猎场</button><button data-page="cases">案例区</button><button data-page="settings">灵石区</button></nav>
+<main><div id="notice" role="status" aria-live="polite"></div>
+<section id="hunt">
+  <h1>主动找机会</h1><p class="intro">从重大新闻、供需变化和价格背离中发现潜在事件，再寻找可能受影响的资产。</p>
+  <article>
+    <h2>开始研究</h2>
+    <form id="scan-form" class="row">
+      <label>研究范围<select id="scan-mode"><option value="all">全部配置数据源</option><option value="asset">资产代码</option><option value="keyword">事件关键词</option></select></label>
+      <label id="scan-query-label" hidden>研究对象<input id="scan-query" maxlength="160"></label>
+      <button type="submit" id="scan-submit">开始扫描</button><button type="button" id="update-opportunities">更新已有机会</button><select id="update-choice" aria-label="选择要更新的机会" hidden></select><button type="button" id="update-confirm" hidden>更新选中机会</button>
+    </form>
+    <p id="scan-progress" role="status"></p>
+    <div id="scan-coverage"></div>
+    <h3>发现的机会</h3><div id="scan-list"></div>
+    <div id="scan-report" hidden></div>
+  </article>
+  <article>
+    <h2>采集新闻与行情</h2>
+    <form id="collection-form" class="row">
+      <label>独立搜索关键词（可选）
+        <input id="collection-query" maxlength="200" placeholder="如央行政策或能源供给">
+      </label>
+      <button id="collect-button" type="submit">手动采集</button>
+    </form>
+    <p id="scanstatus" role="status"></p>
+    <p>重点行情池 <strong id="universe"></strong></p>
+    <p>Alpaca 新闻按其数据源覆盖采集。独立网页搜索可发现池外标的，结果覆盖取决于搜索接口及查询。</p>
+    <div id="collection-results"></div>
+  </article>
+  <article>
+    <h2>事件档案</h2>
+    <p>打开事件查看证据与变化记录，并保存人工判断。</p>
+    <div id="event-list"></div>
+    <div id="event-detail" hidden></div>
+  </article>
+  <article>
+    <h2>重点行情池 · 最近成交</h2>
+    <p>商品代理为交易所交易产品的证券份额。现货、期货和期权各自需要独立的行情源与品种标识。</p>
+    <div id="market-observations"></div>
+  </article>
+</section>
+<section id="cases" hidden><h1>历史案例回放</h1><p>按当时可见信息逐轮研究。受约束回放仍可能受模型已有历史知识影响。</p><div id="replay-overview"></div><div id="replay-results" class="research-timeline"></div><p>历史研究使用已保存、带截断时间的归档材料。</p><label>案例档案 <select id="caseSelect"></select></label><details><summary>案例管理 · TXT 编辑与单轮测试</summary><div class="columns"><article><h2>案例 TXT</h2><p>背景、测试时间节点与新增事实</p><textarea id="inputText" aria-label="案例TXT" placeholder="等待粘贴真实案例"></textarea><input id="inputFile" type="file" accept=".txt,text/plain"><div class="row"><button id="saveInput">保存案例</button><span id="inputVersion"></span></div></article><article><h2>验证 TXT</h2><p>真实结果、参考答案与评分标准，独立存储</p><textarea id="validationText" aria-label="验证TXT" placeholder="等待粘贴真实验证材料"></textarea><input id="validationFile" type="file" accept=".txt,text/plain"><div class="row"><button id="saveValidation">保存验证材料</button><span id="validationVersion"></span></div></article></div><article>
+  <h2>分轮盲测</h2>
+  <details><summary>TXT 格式</summary>
+    <p>在案例 TXT 用 @round 标出截断时间，用 @evidence 标出公开时间和来源。保存后逐轮核对。归档期权格式见项目说明。</p>
+    <pre>@symbol NVDA
+@round YYYY-MM-DDTHH:MM:SS-04:00
+@evidence notice-1 YYYY-MM-DDTHH:MM:SS-04:00 https://example.invalid/archive
+截至当时可见的原文
+@round YYYY-MM-DDTHH:MM:SS-04:00
+@evidence notice-2 YYYY-MM-DDTHH:MM:SS-04:00 https://example.invalid/archive2
+第二个时点新增的原文</pre>
+    <p>验证 TXT 用下列 JSON 结构。只填写可核验的字段，详细字段见项目说明。</p>
+    <pre>{"rounds":[{"cutoff":"YYYY-MM-DDTHH:MM:SS-04:00","outcome":{"summary":"实际结果"},"reference":{"evidence_ids":["notice-1"],"conflict_ids":[],"notes":"参考答案"}}]}</pre>
+  </details>
+  <div class="row"><button type="button" id="case-preview">预览已保存分轮</button><span id="case-workflow-status" role="status"></span></div>
+  <div id="case-timeline"></div>
+  <h3>预测记录与版本比较</h3>
+  <div id="case-runs"></div>
+  <div id="case-prediction"></div>
+</article></details></section>
+<section id="settings" hidden><h1>灵石区</h1><p>保存后主动测试接口。测试会向所填服务发出真实请求，并记录调用。</p><article><h2>试运行预算</h2><form id="limits" class="row"><label>每日 LLM 调用上限<input id="dailyLimit" type="number" min="1" max="10000" required></label><label>每轮扫描深度候选上限<input id="candidateLimit" type="number" min="1" max="100" required></label><button>保存预算</button></form><p>定时扫描默认关闭，可在下方配置。每日预算按 UTC 日界统计。连接测试每次最多一次请求。</p></article><article><h2>定时扫描</h2><p>本地服务运行期间执行。每日增量复用已有研究，每周完整研究重新评估候选。停机后补查各任务最近一期。时间按所填时区。</p>
+<form id="schedule-form" class="row">
+<label>开启调度<input type="checkbox" name="enabled"></label>
+<label>时区<input name="timezone" value="Asia/Shanghai" required></label>
+<label>每日小时<input name="daily_hour" type="number" min="0" max="23" required></label>
+<label>每日分钟<input name="daily_minute" type="number" min="0" max="59" required></label>
+<label>每周日期<select name="weekly_day"><option value="0">周一</option><option value="1">周二</option><option value="2">周三</option><option value="3">周四</option><option value="4">周五</option><option value="5">周六</option><option value="6">周日</option></select></label>
+<label>每周小时<input name="weekly_hour" type="number" min="0" max="23" required></label>
+<label>重点检查间隔（分钟）<input name="priority_minutes" type="number" min="15" max="1440" required></label>
+<label>重点事件关键词（每行一个，最多五个）<textarea name="priority_queries"></textarea></label>
+<label>失败最多重试次数<input name="max_retries" type="number" min="0" max="3" required></label>
+<button>保存调度</button></form><div id="schedule-jobs"></div></article><div id="providers"></div><article><h2>最近调用</h2><p>费用依据配置的美元 / 百万 Token 费率估算。未知用量或费率显示“未知”。</p><div class="table"><table><thead><tr><th>时间</th><th>类别</th><th>状态</th><th>输入 / 输出 Token</th><th>估算 USD</th></tr></thead><tbody id="usage"></tbody></table></div></article></section></main><script src="/static/research.js"></script><script src="/static/options.js"></script><script src="/static/scans.js"></script><script src="/static/cases.js"></script><script src="/static/schedule.js"></script><script src="/static/replay.js"></script><script src="/static/app.js"></script></html>

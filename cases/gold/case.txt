@@ -1,0 +1,16 @@
+@symbol GLD
+@round 2025-09-01T16:00:00-04:00
+@evidence gold-1 2025-08-01T00:00:00Z https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q2-2025/central-banks
+来源摘要，当前检索核对，历史网页版本待核验。世界黄金协会7月31日发布：2025年第二季度央行净购金166吨，较上一季度下降33%。研究央行需求、长期价值锚及反证，不预设价格必然上涨。
+@round 2025-10-08T16:00:00-04:00
+@evidence gold-2 2025-10-08T00:00:00Z https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2025/10
+来源摘要，历史网页版本待核验。10月7日发布的9月黄金ETF报告称9月流入创月度纪录，第三季度流入260亿美元。该结果只能在发布之后使用。研究边际定价者、资金正反馈及因果解释。
+@round 2026-01-05T16:00:00-05:00
+@evidence gold-task-3 2026-01-05T16:00:00-05:00 https://example.invalid/user-research-task-gold-3
+用户研究任务，非新闻证据：本轮检查此前论点、尾部情景、时间窗口、成本和退出条件。没有新增可核实事实时保持未知，不猜测后续结果。
+@round 2026-01-29T16:00:00-05:00
+@evidence gold-task-4 2026-01-29T16:00:00-05:00 https://example.invalid/user-research-task-gold-4
+用户研究任务，非新闻证据：本轮检查此前论点、尾部情景、时间窗口、成本和退出条件。没有新增可核实事实时保持未知，不猜测后续结果。
+@round 2026-02-04T16:00:00-05:00
+@evidence gold-task-5 2026-02-04T16:00:00-05:00 https://example.invalid/user-research-task-gold-5
+用户研究任务，非新闻证据：本轮检查此前论点、尾部情景、时间窗口、成本和退出条件。没有新增可核实事实时保持未知，不猜测后续结果。

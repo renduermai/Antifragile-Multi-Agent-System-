@@ -1,0 +1,22 @@
+version = "research-3.0"
+return_threshold = 0.035
+volume_multiple = 2.5
+residual_z = 2.5
+min_sessions = 45
+rolling_sessions = 20
+minimum_correlation = 0.4
+maximum_correlation_change = 0.35
+confirming_publishers = 2
+max_age_days = 7
+news_age_days = 21
+max_sources = 12
+catalysts = ["regulator", "regulatory", "approval", "sanctions", "supply", "shortage", "strike", "merger", "acquisition", "board", "recall", "filing", "export", "disruption", "inventory", "production", "outage", "central bank", "监管", "制裁", "并购", "董事会", "短缺", "限产", "库存", "断供", "央行", "出口"]
+[benchmarks]
+AAPL = "QQQ"
+MSFT = "QQQ"
+NVDA = "QQQ"
+AMZN = "QQQ"
+META = "QQQ"
+IWM = "SPY"
+QQQ = "SPY"
+

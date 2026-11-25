@@ -1,0 +1,16 @@
+@symbol USO
+@round 2026-01-06T16:00:00-05:00
+@evidence oil-1 2026-01-06T00:00:00Z https://www.eia.gov/todayinenergy/detail.php?id=66944
+来源摘要，历史网页版本待核验。EIA于1月5日回顾2025年：布伦特月均价格从1月79美元每桶下降至12月63美元，全球供应超过需求。此为布伦特口径，不能用作USO价格。与沪深300约30%背离尚缺同步数据，先作为待验证假设。
+@round 2026-01-30T16:00:00-05:00
+@evidence oil-task-2 2026-01-30T16:00:00-05:00 https://example.invalid/user-research-task-oil-2
+用户研究任务，非新闻证据：本轮检查此前论点、尾部情景、时间窗口、成本和退出条件。没有新增可核实事实时保持未知，不猜测后续结果。
+@round 2026-02-20T16:00:00-05:00
+@evidence oil-task-3 2026-02-20T16:00:00-05:00 https://example.invalid/user-research-task-oil-3
+用户研究任务，非新闻证据：本轮检查此前论点、尾部情景、时间窗口、成本和退出条件。没有新增可核实事实时保持未知，不猜测后续结果。
+@round 2026-02-27T16:00:00-05:00
+@evidence oil-task-4 2026-02-27T16:00:00-05:00 https://example.invalid/user-research-task-oil-4
+用户研究任务，非新闻证据：本轮检查此前论点、尾部情景、时间窗口、成本和退出条件。没有新增可核实事实时保持未知，不猜测后续结果。
+@round 2026-04-08T16:00:00-04:00
+@evidence oil-task-5 2026-04-08T16:00:00-04:00 https://example.invalid/user-research-task-oil-5
+用户研究任务，非新闻证据：本轮检查此前论点、尾部情景、时间窗口、成本和退出条件。没有新增可核实事实时保持未知，不猜测后续结果。

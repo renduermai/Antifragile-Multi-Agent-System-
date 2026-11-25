@@ -1,0 +1,13 @@
+@symbol NVDA
+@round 2026-11-20T15:55:00-05:00
+@evidence nvda-1 2026-11-13T00:00:00Z https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition
+已检索到11月12日公司公告，历史网页版本及具体首次公开时分待核验。公告称黄仁勋辞去CEO及董事职务，Colette Kress任临时CEO。研究任务：区分董事会决定权、总统影响力、回归意愿和独立监管风险。尚缺过去三周完整的当时新闻归档，不能把用户要求核查的事项直接视为事实。
+@round 2026-11-22T23:30:00-05:00
+@evidence nvda-2 2026-11-22T23:30:00-05:00 https://example.invalid/user-supplied-nvda-round2
+用户提供的历史测试设定，尚未独立核实该时刻公开记录：特朗普公开要求董事会复聘黄仁勋。总统施压不等于董事会已作出决定。
+@round 2026-11-23T09:30:00-05:00
+@evidence nvda-3 2026-11-23T09:30:00-05:00 https://example.invalid/user-supplied-nvda-round3
+用户提供测试设定，价格和时分待独立核验：公司宣布复聘黄仁勋，正股开盘167.04美元，150美元Call出现18美元成交。假设此前0.62美元买入11月25日到期150Call，只研究卖出平仓限价与Bid深度；历史成交价不能证明个人已成交。
+@round 2026-11-23T16:10:00-05:00
+@evidence nvda-4 2026-11-23T16:10:00-05:00 https://example.invalid/user-supplied-nvda-round4
+用户提供测试设定：正股收盘165.05美元，期权日内成交10至22.20美元，近收盘成交15.87美元。均为用户参考记录，实际Bid和成交单缺失。
